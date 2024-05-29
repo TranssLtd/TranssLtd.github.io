@@ -143,6 +143,7 @@ form button.btn-primary:hover {
   background-size: cover;
   overflow: hidden;
   position: relative;
+  background-color: #00008B;
   z-index: 0;
 }
 
