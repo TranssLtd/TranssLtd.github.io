@@ -75,3 +75,14 @@
 function myFunction(x) {
     x.classList.toggle("change");
 }
+
+
+
+
+// JavaScript to apply animation delays to each word
+document.addEventListener('DOMContentLoaded', function () {
+const words = document.querySelectorAll('.highlight');
+words.forEach((word, index) => {
+word.style.animationDelay = `${index * 0.2}s`;
+});
+})
