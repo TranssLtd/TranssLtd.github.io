@@ -85,4 +85,4 @@ const words = document.querySelectorAll('.highlight');
 words.forEach((word, index) => {
 word.style.animationDelay = `${index * 0.2}s`;
 });
-})
+});
