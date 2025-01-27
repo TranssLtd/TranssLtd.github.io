@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Malindi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            line-height: 1.6;
+        }
+        header {
+            position: relative;
+            height: 100vh;
+            background: url('1.webp') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        header h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        header p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+        }
+        .book-now-btn {
+            display: inline-block;
+            background-color: #e67e22;
+            color: white;
+            font-size: 20px;
+            padding: 15px 40px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .book-now-btn:hover {
+            background-color: #cf6c1a;
+            transform: scale(1.1);
+        }
+        .price-banner {
+            background-color: #3b9d7b;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            padding: 20px 0;
+            font-weight: bold;
+            margin: -40px auto 20px;
+        }
+        .content {
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: #3b9d7b;
+        }
+        .places-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            justify-items: center;
+        }
+        .place-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            width: 100%;
+        }
+        .place-card:hover {
+            transform: scale(1.05);
+        }
+        .place-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .place-card .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .place-card h3 {
+            font-size: 24px;
+            color: #3b9d7b;
+            margin-bottom: 10px;
+        }
+        .place-card p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .button {
+            background-color: #3b9d7b;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #2d7a5d;
+        }
+
+        /* Social Media Icons */
+        .social-media {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .social-media a {
+            color: #555;
+            font-size: 24px;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .social-media a:hover {
+            color: #3b9d7b;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 36px;
+            }
+            header p {
+                font-size: 16px;
+            }
+            .places-section {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 28px;
+            }
+            header p {
+                font-size: 14px;
+            }
+            .places-section {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Discover the Magic of Malindi</h1>
+    <p>Explore the rich history, beautiful landscapes, and vibrant marine life of Malindi. Book your tour now!</p>
+    <a href="booking.html" class="book-now-btn">Book Now</a>
+</header>
+<br>
+<div class="price-banner">
+    Price: Ksh. 15,000 for the full tour experience
+</div>
+
+<div class="content">
+    <h2>Explore Malindi's Top Attractions</h2>
+    <p>Malindi offers a variety of exciting experiences, from historical sites to stunning beaches. Check out our top places to visit below!</p>
+
+    <div class="places-section">
+
+        <!-- Gede Ruins -->
+        <div class="place-card">
+            <img src="1.webp" alt="Gede Ruins">
+            <div class="content">
+                <h3>Gede Ruins</h3>
+                <p>Explore the ancient Swahili ruins, set amidst lush forests, where you can uncover the mysteries of a 12th-century town.</p>
+                <div class="buttons">
+                    <a href="itinerary.html" class="button">Itinerary</a>
+                    <a href="contact.html" class="button">Contact Us</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mambrui Sand Dunes -->
+        <div class="place-card">
+            <img src="4.jpg" alt="Mambrui Sand Dunes">
+            <div class="content">
+                <h3>Mambrui Sand Dunes</h3>
+                <p>Visit the golden dunes of Mambrui, perfect for sandboarding, scenic walks, and stunning photographs of nature.</p>
+                <div class="buttons">
+                    <a href="itinerary.html" class="button">Itinerary</a>
+                    <a href="contact.html" class="button">Contact Us</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Malindi Marine Park -->
+        <div class="place-card">
+            <img src="6.jpg" alt="Malindi Marine Park">
+            <div class="content">
+                <h3>Malindi Marine Park</h3>
+                <p>Experience vibrant marine life with snorkeling and diving in the Malindi Marine Park, a haven for underwater exploration.</p>
+                <div class="buttons">
+                    <a href="itinerary.html" class="button">Itinerary</a>
+                    <a href="contact.html" class="button">Contact Us</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hell's Kitchen -->
+        <div class="place-card">
+            <img src="1.webp" alt="Hell's Kitchen">
+            <div class="content">
+                <h3>Hell’s Kitchen (Marafa)</h3>
+                <p>Discover the striking geological formations of Marafa, known for its multicolored sandstone and dramatic cliffs, best viewed during sunset.</p>
+                <div class="buttons">
+                    <a href="itinerary.html" class="button">Itinerary</a>
+                    <a href="contact.html" class="button">Contact Us</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Social Media Section -->
+<div class="social-media">
+    <a href="https://facebook.com" target="_blank">Facebook</a>
+    <a href="https://twitter.com" target="_blank">Twitter</a>
+    <a href="https://instagram.com" target="_blank">Instagram</a>
+</div>
+
+</body>
+</html>

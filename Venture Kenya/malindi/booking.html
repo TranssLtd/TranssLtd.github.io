@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Malindi</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('1.webp'); /* Add your image here */
+            background-size: cover;
+            background-position: center;
+            color: #333;
+            height: 100vh;
+            transition: background 0.3s ease;
+        }
+
+        header {
+            background-color: rgba(0, 119, 182, 0.8); /* Semi-transparent blue */
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 5px solid #ffcc00;
+        }
+
+        h1 {
+            font-size: 40px;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        .content {
+            padding: 40px;
+            text-align: center;
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .price-section {
+            background-color: #ffe5b4;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .price-section h2 {
+            color: #0077b6;
+            font-size: 32px;
+            font-weight: 600;
+        }
+
+        .form-section {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-section input, .form-section select, .form-section button {
+            width: 100%;
+            padding: 15px;
+            margin: 12px 0;
+            font-size: 18px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .form-section input:focus, .form-section select:focus {
+            border-color: #00b4d8;
+            box-shadow: 0 0 5px rgba(0, 180, 216, 0.6);
+        }
+
+        .form-section button {
+            background-color: #0077b6;
+            color: white;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            padding: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-section button:hover {
+            background-color: #005f82;
+        }
+
+        .payment-button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .payment-button-container button {
+            width: 100%;
+            font-size: 18px;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .payment-button-container .payment-button {
+            background-color: #ffcc00;
+            color: #0077b6;
+        }
+
+        .payment-button-container .payment-button:hover {
+            background-color: #e6a800;
+        }
+
+        .payment-instructions {
+            background-color: rgba(0, 119, 182, 0.9);
+            color: white;
+            padding: 20px;
+            margin-top: 30px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .payment-instructions h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .payment-instructions p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .payment-instructions .button {
+            background-color: #ffcc00;
+            color: #0077b6;
+            font-size: 20px;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .payment-instructions .button:hover {
+            background-color: #e6a800;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header {
+                padding: 20px;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .form-section {
+                max-width: 90%;
+                padding: 20px;
+            }
+
+            .form-section input, .form-section select, .form-section button {
+                font-size: 16px;
+                padding: 12px;
+            }
+
+            .payment-button-container button {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .payment-instructions h3 {
+                font-size: 20px;
+            }
+
+            .payment-instructions p {
+                font-size: 16px;
+            }
+
+            .payment-instructions .button {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            .form-section {
+                padding: 15px;
+            }
+
+            .form-section input, .form-section select, .form-section button {
+                padding: 10px;
+                font-size: 14px;
+            }
+
+            .payment-instructions h3 {
+                font-size: 18px;
+            }
+
+            .payment-instructions p {
+                font-size: 14px;
+            }
+
+            .payment-instructions .button {
+                font-size: 16px;
+                padding: 12px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Discover the Wonders of Malindi</h1>
+    <p>Explore Malindi’s pristine beaches, marine parks, and stunning natural landscapes. Let’s make this adventure unforgettable!</p>
+</header>
+
+<div class="price-section">
+    <h2>Price for Malindi Trip: Ksh. 15,000</h2>
+</div>
+
+<div class="content">
+    <h2>Book Now</h2>
+    <p>Fill in your details and select Malindi to proceed with booking and payment.</p>
+
+    <!-- Form Section -->
+    <form class="form-section" action="https://formspree.io/f/xnnaebqp" method="POST">
+        <!-- Personal Information -->
+        <h3>Your Information</h3>
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+
+        <!-- Customer Residence -->
+        <input type="text" name="residence" placeholder="Your Residence (City, Country)" required>
+
+        <!-- Trip Dates -->
+        <label for="trip-dates">Select Trip Dates:</label>
+        <input type="date" name="trip-dates" id="trip-dates" required>
+
+        <!-- Trip Selection -->
+        <h3>Select Your Trip</h3>
+        <label for="trip">Choose Your Destination:</label>
+        <select name="trip" id="trip" required>
+            <option value="malindi">Malindi</option>
+        </select>
+
+        <!-- Total Payment Section -->
+        <div id="total-payment">
+            <h4>Total Payment: Ksh. 15,000</h4>
+        </div>
+
+        <div class="payment-button-container">
+            <button type="submit">Submit Booking</button>
+        </div>
+    </form>
+
+    <!-- Payment Instructions Section (Displayed at the Bottom) -->
+    <div class="payment-instructions">
+        <h3>Thank you for choosing Malindi as your destination!</h3>
+        <p>Before proceeding to payment, please ensure that all the information entered in the form is correct. After you've submitted your booking, you can securely make your payment.</p>
+        <p><strong>Important:</strong> Only after you've completed the form submission will you be redirected to the payment page. This ensures that we can properly process your booking before we finalize payment.</p>
+        <p>Once payment is confirmed, we will send you all the details of your booking, including travel dates, accommodation, and other important information for a seamless trip.</p>
+        <a href="http://kachish.free.nf/daraja/index.php" class="button">Proceed to Payment</a>
+    </div>
+</div>
+
+</body>
+</html>
