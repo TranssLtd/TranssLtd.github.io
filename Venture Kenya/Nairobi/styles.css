@@ -1,0 +1,828 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+/* Navbar */
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #FF5733, #FFC300); /* Eye-catching gradient */
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo a {
+    font-size: 1.8rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #FFD700; /* Gold hover effect */
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 30px;
+    height: 3px;
+    background: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: #FF5733; /* Consistent color for mobile */
+        border-radius: 10px;
+        width: 200px;
+        padding: 10px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+/* Nairobi National Park Section */
+/* Section General Styles */
+/* Section General Styles */
+section {
+    padding: 60px 20px;
+    position: relative;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+.intro-text {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #fff;
+}
+
+/* Background Images */
+.about-us {
+    background: url('4.jpg') no-repeat center center/cover;
+    position: relative;
+}
+
+.nairobi-park {
+    background: url('6.jpg') no-repeat center center/cover;
+    position: relative;
+}
+
+.about-us::after, .nairobi-park::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for better text visibility */
+    z-index: 1;
+}
+
+.about-container, .park-container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Card Styles */
+.about-cards, .park-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    width: calc(33.33% - 40px);
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #FF5733;
+}
+
+.card p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .card {
+        width: calc(50% - 30px);
+    }
+
+    .intro-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-cards, .park-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    .intro-text {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+/* Itineraries Section */
+.itineraries {
+    padding: 60px 20px;
+    background: url('4.jpg') no-repeat center center/cover;
+    position: relative;
+}
+
+.itineraries::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for better text visibility */
+    z-index: 1;
+}
+
+.itinerary-container {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+}
+
+.itineraries h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #FFCC00;
+}
+
+.itinerary-intro {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+.itinerary-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    width: calc(33.33% - 40px);
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #FF5733;
+}
+
+.card p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .card {
+        width: calc(50% - 30px);
+    }
+
+    .itinerary-intro {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .itinerary-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .itineraries h2 {
+        font-size: 2rem;
+    }
+
+    .itinerary-intro {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
+
+
+
+
+/* Booking Section */
+/* Booking Section */
+.booking-section {
+    padding: 60px 20px;
+    background: url('4.jpg') no-repeat center center/cover;
+    position: relative;
+}
+
+.booking-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for better text visibility */
+    z-index: 1;
+}
+
+.booking-container {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.booking-section h2 {
+    font-size: 2.5rem;
+    color: #FFCC00;
+    margin-bottom: 20px;
+}
+
+.booking-intro {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+.booking-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 0 auto;
+    color: #333;
+}
+
+.booking-form .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.booking-form label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+    border-color: #FFCC00;
+    box-shadow: 0 0 5px rgba(255, 204, 0, 0.6);
+}
+
+.booking-form textarea {
+    resize: none;
+}
+
+.payment-instructions {
+    font-size: 0.9rem;
+    background: #f9f9f9;
+    padding: 10px;
+    border-left: 4px solid #FFCC00;
+    margin-bottom: 20px;
+}
+
+.form-actions {
+    text-align: center;
+}
+
+.btn-book {
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #FF5733;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.btn-book:hover {
+    background-color: #D44A28;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .booking-section h2 {
+        font-size: 2rem;
+    }
+
+    .booking-intro {
+        font-size: 1rem;
+    }
+
+    .btn-book {
+        width: 100%;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .booking-form .form-actions {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .booking-section h2 {
+        font-size: 2rem;
+    }
+
+    .booking-intro {
+        font-size: 1rem;
+    }
+
+    .btn-book,
+    .btn-payment {
+        width: 100%;
+    }
+}
+
+
+
+
+
+/* Payment Section */
+.payment-section {
+    padding: 60px 20px;
+    background: url('6.jpg') no-repeat center center/cover;
+    position: relative;
+    color: #fff;
+    text-align: center;
+}
+
+.payment-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for text visibility */
+    z-index: 1;
+}
+
+.payment-container {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.payment-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #FFCC00;
+}
+
+.payment-description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    padding: 0 10px;
+}
+
+.payment-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+}
+
+.btn-payment {
+    background-color: #28A745;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.btn-payment:hover {
+    background-color: #218838;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .payment-section h2 {
+        font-size: 2rem;
+    }
+
+    .payment-description {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .btn-payment {
+        width: 100%;
+        padding: 15px 0;
+    }
+}
+
+
+
+.contact-section {
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .contact-section h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+  
+  .contact-section p {
+    text-align: center;
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+  
+  .contact-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .contact-card h3 {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 1.5rem;
+  }
+  
+  .contact-card a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .contact-card a:hover {
+    text-decoration: underline;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-form h3 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.5rem;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  .contact-form button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  @media (max-width: 768px) {
+    .contact-card,
+    .contact-form {
+      padding: 15px;
+    }
+  
+    .contact-form input,
+    .contact-form textarea {
+      max-width: 100%;
+    }
+  }
+  
+
+
+  .map-container {
+    margin: 30px 0;
+    text-align: center;
+  }
+  
+  .map-container h3 {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 1.5rem;
+  }
+  
+  .map-container iframe {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+
+
+
+
+/* Experience Cards */
+.experience-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 15px 0;
+    font-size: 1.8em;
+}
+
+.card p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.card .btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 4px;
+}
+
+.card .btn:hover {
+    background-color: #218838;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Social Media Links */
+.social-media {
+    margin-top: 50px;
+}
+
+.social-media h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Booking Section */
+.booking-section {
+    background-color: #28a745;
+    color: white;
+    padding: 40px 20px;
+    margin-top: 50px;
+}
+
+.booking-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.booking-section p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.book-btn {
+    background-color: #ffd700;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.5em;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.book-btn:hover {
+    background-color: #ffcc00;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-social-links {
+    margin-top: 20px;
+}
+
+.footer-icon {
+    margin: 0 15px;
+}
+
+.footer-icon img {
+    width: 30px;
+    height: 30px;
+}
