@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Diani</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #1e90ff;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header h2 {
+            margin: 10px 0;
+            font-size: 24px;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        .button {
+            background-color: #ff8c00;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 10px;
+        }
+
+        .button:hover {
+            background-color: #e07b00;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .places-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .place-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 30%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .place-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .place-card .content {
+            padding: 20px;
+        }
+
+        .place-card h3 {
+            margin-top: 10px;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .place-card p {
+            color: #666;
+        }
+
+        .place-card .buttons {
+            margin-top: 20px;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 1200px) {
+            .place-card {
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .place-card {
+                width: 100%;
+            }
+
+            header h2 {
+                font-size: 20px;
+            }
+
+            .buttons {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .button {
+                margin: 10px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 22px;
+            }
+
+            header h2 {
+                font-size: 18px;
+            }
+
+            .place-card h3 {
+                font-size: 18px;
+            }
+
+            .place-card p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Discover the Beauty of Diani</h1>
+    <p>Experience the stunning beaches, vibrant marine life, and serene landscapes of Diani. Book your tour today!</p>
+    <h2>Total Price: Ksh. 25000</h2> <!-- Displayed Total Price -->
+    <div class="buttons">
+       
+        <a href="booking.html" class="button">Book Now</a> <!-- Contact Us Button -->
+    </div>
+</header>
+
+<div class="content">
+    <h2>Top Attractions in Diani</h2>
+    <p>Diani offers incredible experiences, from relaxing dhow rides to dolphin tours and vibrant underwater adventures. Check out the best places to visit below!</p>
+
+    <div class="places-section">
+
+        <!-- Congo River Sunset Dhow Ride -->
+        <div class="place-card" data-tour="Congo River Sunset Dhow Ride">
+            <img src="1.webp" alt="Congo River Sunset Dhow Ride">
+            <div class="content">
+                <h3>Congo River Sunset Dhow Ride</h3>
+                <p>Sail along the Congo River on a traditional dhow, soaking in the panoramic sunset views, mangroves, and tranquil waters.</p>
+                <div class="buttons">
+                    <a href="itinerary.html" class="button">Itineraries</a> <!-- Replaced Book Now with Itineraries -->
+                    <a href="contact.html" class="button">Contact Us</a> <!-- Contact Us Button -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Kisite Mpunguti Dolphin Tour -->
+        <div class="place-card" data-tour="Kisite Mpunguti Dolphin Tour">
+            <img src="4.jpg" alt="Kisite Mpunguti Dolphin Tour">
+            <div class="content">
+                <h3>Kisite Mpunguti Dolphin Tour</h3>
+                <p>Explore Kisite Mpunguti Marine Park, famous for dolphin sightings, snorkeling, and diving, and visit Wasini Island for a cultural experience.</p>
+                <div class="buttons">
+                    <a href="itinerary.html" class="button">Itineraries</a> <!-- Replaced Book Now with Itineraries -->
+                    <a href="contact.html" class="button">Contact Us</a> <!-- Contact Us Button -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Diani Beach -->
+        <div class="place-card" data-tour="Diani Beach">
+            <img src="6.jpg" alt="Diani Beach">
+            <div class="content">
+                <h3>Diani Beach</h3>
+                <p>Relax on the pristine, white sand beaches of Diani, known for its crystal-clear waters, ideal for swimming, sunbathing, and beach sports.</p>
+                <div class="buttons">
+                    <a href="itinerary.html" class="button">Itineraries</a> <!-- Replaced Book Now with Itineraries -->
+                    <a href="contact.html" class="button">Contact Us</a> <!-- Contact Us Button -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Colobus Conservation -->
+        <div class="place-card" data-tour="Colobus Conservation">
+            <img src="4.jpg" alt="Colobus Conservation">
+            <div class="content">
+                <h3>Colobus Conservation</h3>
+                <p>Visit the Colobus Conservation Centre, dedicated to protecting endangered monkeys and learn about the efforts to preserve these unique species.</p>
+                <div class="buttons">
+                    <a href="itinerary.html" class="button">Itineraries</a> <!-- Replaced Book Now with Itineraries -->
+                    <a href="contact.html" class="button">Contact Us</a> <!-- Contact Us Button -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Shimba Hills National Reserve -->
+        <div class="place-card" data-tour="Shimba Hills National Reserve">
+            <img src="1.webp" alt="Shimba Hills National Reserve">
+            <div class="content">
+                <h3>Shimba Hills National Reserve</h3>
+                <p>Discover the diverse wildlife of Shimba Hills, home to elephants, leopards, and other unique species, along with stunning views of the coastal forests.</p>
+                <div class="buttons">
+                    <a href="itinerary.html" class="button">Itineraries</a> <!-- Replaced Book Now with Itineraries -->
+                    <a href="contact.html" class="button">Contact Us</a> <!-- Contact Us Button -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="scripts.js"></script>
+</body>
+</html>

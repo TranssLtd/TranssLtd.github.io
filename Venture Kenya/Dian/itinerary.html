@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itinerary - Diani Tour from Meeting Point</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Raleway', sans-serif;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        /* Header */
+        header {
+            background: url('diani-header.jpg') no-repeat center center/cover;
+            padding: 80px 0;
+            text-align: center;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 20px;
+            font-weight: 600;
+            color: #f39c12; /* Changed font color here */
+        }
+
+        /* Itinerary Section */
+        .itinerary-section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .itinerary-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .itinerary-card img {
+            width: 50%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .itinerary-card .content {
+            padding: 20px;
+            flex: 1;
+        }
+
+        .itinerary-card h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .itinerary-card p {
+            color: #555;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        /* Meeting Point */
+        .meeting-point {
+            background-color: #ff6347;
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .meeting-point h2 {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .meeting-point p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #f39c12;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .itinerary-card {
+                flex-direction: column;
+            }
+
+            .itinerary-card img {
+                width: 100%;
+            }
+
+            header h1 {
+                font-size: 36px;
+            }
+
+            header p {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            header p {
+                font-size: 16px;
+            }
+
+            .itinerary-card h3 {
+                font-size: 22px;
+            }
+
+            .itinerary-card p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <h1>Explore the Best of Diani</h1>
+    <p>Your Adventure Begins from the Meeting Point</p>
+</header>
+
+<!-- Meeting Point Section -->
+<section class="meeting-point">
+    <h2>Meeting Point: Diani Beach</h2>
+    <p>We’ll meet at Diani Beach at 8:00 AM for a briefing. Please make sure to be there on time as we start our adventure from this beautiful location. The tour guide will be waiting for you near the main entrance to the beach, holding a sign with your tour name.</p>
+</section>
+
+<!-- Itinerary Section -->
+<section class="itinerary-section">
+    <div class="itinerary-card">
+        <img src="1.webp" alt="Congo River Sunset Dhow Ride">
+        <div class="content">
+            <h3>Congo River Sunset Dhow Ride</h3>
+            <p>After our meeting point at Diani Beach, we head to the Congo River for a breathtaking sunset dhow ride. As you cruise along the river, you will have the opportunity to take in the natural beauty of the area, with mangrove forests lining the river banks and a spectacular view of the sunset. The tour guide will share interesting facts about the ecosystem and history of the river.</p>
+            <p>This part of the tour is designed for relaxation and scenic photography, making it a perfect way to begin your day in Diani.</p>
+        </div>
+    </div>
+
+    <div class="itinerary-card">
+        <img src="4.jpg" alt="Kisite Mpunguti Dolphin Tour">
+        <div class="content">
+            <h3>Kisite Mpunguti Dolphin Tour</h3>
+            <p>Our next stop is the Kisite Mpunguti Marine Park, a famous spot for dolphin watching. You will board a boat and embark on a journey to the marine park, where you can spot dolphins, snorkel in crystal-clear waters, and enjoy the vibrant coral reefs.</p>
+            <p>This tour offers a great opportunity to experience the marine life up close, and the guides will ensure your safety and comfort while in the water. It's an activity that's perfect for nature lovers and adventure enthusiasts alike.</p>
+        </div>
+    </div>
+
+    <div class="itinerary-card">
+        <img src="6.jpg" alt="Diani Beach">
+        <div class="content">
+            <h3>Diani Beach</h3>
+            <p>After an exciting day of activities, we will return to Diani Beach for a leisurely afternoon. You can spend your time relaxing on the beach, enjoying the sun, or participating in various water sports activities like jet skiing, kite surfing, or paddle boarding.</p>
+            <p>The beach is a beautiful and serene place, with its white sandy shores and turquoise waters. It's the perfect spot to unwind before continuing your journey in Diani.</p>
+        </div>
+    </div>
+
+    <div class="itinerary-card">
+        <img src="4.jpg" alt="Colobus Conservation">
+        <div class="content">
+            <h3>Colobus Conservation</h3>
+            <p>Next, we visit the Colobus Conservation Center, which is dedicated to the protection of endangered colobus monkeys. Here, you will have the chance to learn about the conservation efforts in the region and the importance of preserving the local wildlife. You may also have the opportunity to spot these incredible primates in their natural habitat.</p>
+            <p>This visit is an enriching experience for those interested in environmental conservation and wildlife protection.</p>
+        </div>
+    </div>
+
+    <div class="itinerary-card">
+        <img src="1.webp" alt="Shimba Hills National Reserve">
+        <div class="content">
+            <h3>Shimba Hills National Reserve</h3>
+            <p>To conclude the tour, we head to the Shimba Hills National Reserve, known for its stunning landscapes and rich wildlife. Here, you can explore the lush forest and open savanna, spotting various animals like elephants, giraffes, and antelopes. The reserve is also home to the rare sable antelope, which is a highlight of the tour.</p>
+            <p>This portion of the tour is ideal for wildlife enthusiasts, offering a perfect mix of adventure and natural beauty. Enjoy a peaceful hike or safari game drive through the reserve before we return to Diani Beach for the end of our tour.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 Explore Diani. All Rights Reserved. | <a href="privacy-policy.html">Privacy Policy</a></p>
+</footer>
+
+</body>
+</html>

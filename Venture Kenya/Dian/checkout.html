@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diani Tour Booking</title>
+    <style>
+        /* Same styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #00796b;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 16px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 30px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #00796b;
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            font-size: 16px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select {
+            font-size: 16px;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+        input[type="date"] {
+            color: #555;
+        }
+        .summary {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        .summary p {
+            margin-bottom: 8px;
+        }
+        .button {
+            background-color: #00796b;
+            color: white;
+            font-size: 16px;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+        }
+        .button:hover {
+            background-color: #004d40;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #888;
+        }
+        .places {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+        .place {
+            padding: 10px 15px;
+            background-color: #00796b;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            flex: 1 1 calc(33.333% - 20px);
+            text-align: center;
+        }
+        .place:hover {
+            background-color: #004d40;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Diani Tour Booking</h1>
+    <p>Select your destination in Diani, confirm payment via BuyGoods, and send details for confirmation.</p>
+</header>
+
+<div class="container">
+    <h2>Select a Location</h2>
+
+    <!-- Destination Selector -->
+    <div class="places">
+        <div class="place" data-name="Chale Island" data-price="6000" data-description="Serene island getaway.">
+            Chale Island
+        </div>
+        <div class="place" data-name="Wasini Island" data-price="7000" data-description="Scenic marine adventures.">
+            Wasini Island
+        </div>
+        <div class="place" data-name="Shimoni Caves" data-price="5000" data-description="Historic caves with a rich story.">
+            Shimoni Caves
+        </div>
+        <div class="place" data-name="Kisite Mpunguti" data-price="4500" data-description="Marine park snorkeling.">
+            Kisite Mpunguti
+        </div>
+        <div class="place" data-name="Tiwi Beach" data-price="3000" data-description="Relaxation at its best.">
+            Tiwi Beach
+        </div>
+        <div class="place" data-name="Diani Beach" data-price="3500" data-description="Enjoy the iconic Diani Beach.">
+            Diani Beach
+        </div>
+    </div>
+
+    <!-- Booking Form -->
+    <form id="bookingForm">
+        <!-- Summary -->
+        <div class="summary">
+            <p><strong>Tour Name:</strong> <span id="tourName">Diani Beach</span></p>
+            <p><strong>Price Per Person:</strong> Ksh. <span id="pricePerPerson">3500</span></p>
+            <p><strong>Description:</strong> <span id="description">Enjoy the iconic Diani Beach.</span></p>
+            <p>
+                <label for="attendees"><strong>Total Attendees:</strong></label>
+                <input type="number" id="attendees" name="attendees" min="1" value="1" required>
+            </p>
+            <p><strong>Total Price:</strong> Ksh. <span id="totalPrice">3500</span></p>
+        </div>
+
+        <!-- Personal Details -->
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+        <label for="date">Preferred Date</label>
+        <input type="date" id="date" name="date" required>
+
+        <!-- BuyGoods Info -->
+        <p><strong>BuyGoods Number:</strong> <span>4097548</span></p>
+
+        <button type="button" class="button" id="submitButton">Confirm Booking</button>
+    </form>
+</div>
+
+<footer>
+    <p>&copy; 2025 Explore Diani Tours. All Rights Reserved.</p>
+</footer>
+
+<script>
+    const places = document.querySelectorAll('.place');
+    const tourName = document.getElementById('tourName');
+    const pricePerPerson = document.getElementById('pricePerPerson');
+    const description = document.getElementById('description');
+    const attendeesInput = document.getElementById('attendees');
+    const totalPriceSpan = document.getElementById('totalPrice');
+    const submitButton = document.getElementById('submitButton');
+
+    places.forEach(place => {
+        place.addEventListener('click', () => {
+            const name = place.getAttribute('data-name');
+            const price = place.getAttribute('data-price');
+            const desc = place.getAttribute('data-description');
+
+            tourName.textContent = name;
+            pricePerPerson.textContent = price;
+            description.textContent = desc;
+
+            const attendees = parseInt(attendeesInput.value) || 1;
+            totalPriceSpan.textContent = (attendees * price).toLocaleString();
+        });
+    });
+
+    attendeesInput.addEventListener('input', () => {
+        const attendees = parseInt(attendeesInput.value) || 1;
+        const price = parseInt(pricePerPerson.textContent);
+        totalPriceSpan.textContent = (attendees * price).toLocaleString();
+    });
+
+    submitButton.addEventListener('click', () => {
+        if (confirm('Have you paid via BuyGoods 4097548?')) {
+            const name = document.getElementById('fullName').value;
+            const phone = document.getElementById('phone').value;
+            const tour = tourName.textContent;
+            const attendees = attendeesInput.value;
+            const total = totalPriceSpan.textContent;
+
+            const whatsappUrl = `https://wa.me/254745087870?text=I%20have%20booked%20a%20tour%20to%20${encodeURIComponent(
+                tour
+            )}.%20Details%3A%0AName%3A%20${encodeURIComponent(
+                name
+            )}%0APhone%3A%20${encodeURIComponent(phone)}%0ATotal%20Attendees%3A%20${attendees}%0ATotal%20Price%3A%20Ksh.%20${total}%0APlease%20confirm%20payment%20via%20BuyGoods%204097548.`;
+
+            window.open(whatsappUrl, '_blank');
+        }
+    });
+</script>
+
+</body>
+</html>
